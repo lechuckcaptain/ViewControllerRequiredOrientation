@@ -19,34 +19,46 @@ class ViewController: UIViewController {
             _ = addLeftBarButton(closeDialogButton)
         }
 
-        UIViewController.attemptRotationToDeviceOrientation()
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        UIViewController.attemptRotationToDeviceOrientation()
+        print("Device orientation: \(UIDevice.current.orientation)")
+        if (!isCurrentOrientationSupported()) {
+            changeOrientation(preferredInterfaceOrientationForPresentation)
+        }
     }
 }
 
 class HViewController: ViewController {
 
     override var shouldAutorotate: Bool {
-        return false
+        return true
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .landscape
+    }
+
+    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+        switch (UIDevice.current.orientation) {
+        case UIDeviceOrientation.landscapeLeft:
+            return .landscapeLeft
+        case UIDeviceOrientation.landscapeRight:
+           return .landscapeRight
+        default:
+            return .landscapeRight
+        }
     }
 }
 
 class VViewController: ViewController {
 
     override var shouldAutorotate: Bool {
-        return false
+        return true
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+
+    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
         return .portrait
     }
 }
@@ -58,6 +70,28 @@ extension NSObject {
 }
 
 extension UIViewController {
+
+    func isCurrentOrientationSupported() -> Bool {
+        var deviceInterfaceOrientationMask : UIInterfaceOrientationMask
+        switch (UIDevice.current.orientation) {
+        case UIDeviceOrientation.portrait:
+            deviceInterfaceOrientationMask = .portrait
+        case UIDeviceOrientation.portraitUpsideDown:
+            deviceInterfaceOrientationMask = .portraitUpsideDown
+        case UIDeviceOrientation.landscapeLeft:
+            deviceInterfaceOrientationMask = .landscapeLeft
+        case UIDeviceOrientation.landscapeRight:
+            deviceInterfaceOrientationMask = .landscapeRight
+        default:
+            deviceInterfaceOrientationMask = .portrait
+        }
+        return (Int(deviceInterfaceOrientationMask.rawValue) & Int(supportedInterfaceOrientations.rawValue)) != 0
+    }
+
+    func changeOrientation(_ orientation: UIInterfaceOrientation) {
+        print("Change orientation: \(orientation)")
+        UIDevice.current.setValue(orientation.rawValue, forKey: "orientation")
+    }
 
     var isModal: Bool {
         let presentingIsModal = presentingViewController != nil
@@ -91,17 +125,23 @@ extension UIViewController {
 class NavigationController: UINavigationController {
 
     override var shouldAutorotate: Bool {
+        //        return false
         let sa = topViewController?.shouldAutorotate ?? super.shouldAutorotate
-//        print("Rotation - '\(self.typeName)' shouldAutorotate: \(sa)")
-        return false
-//        return sa
+        print("Rotation - '\(self.typeName)' shouldAutorotate: \(sa)")
+        return sa
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        //        return .portrait
         let sio = topViewController?.supportedInterfaceOrientations ?? super.supportedInterfaceOrientations
         print("Rotation - '\(self.typeName)' supportedInterfaceOrientations: \(sio)")
-        return .portrait
-//        return sio
+        return sio
+    }
+
+    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+        let v = topViewController?.preferredInterfaceOrientationForPresentation ?? super.preferredInterfaceOrientationForPresentation
+        print("Rotation - '\(self.typeName)' preferredInterfaceOrientationForPresentation: \(v)")
+        return v
     }
 }
 
@@ -129,13 +169,49 @@ extension UIInterfaceOrientationMask: CustomStringConvertible {
     public var description: String {
         var values : [String] = []
         if self.contains(.portrait) { values.append("Portrait") }
+        if self.contains(.portraitUpsideDown) { values.append("PortraitUpsideDown") }
         if self.contains(.landscapeLeft) { values.append("LandscapeLeft") }
         if self.contains(.landscapeRight) { values.append("LandscapeRight") }
-        if self.contains(.portraitUpsideDown) { values.append("PortraitUpsideDown") }
         if self.contains(.landscape) { values.append("Landscape") }
         if self.contains(.all) { values.append("All") }
         if self.contains(.allButUpsideDown) { values.append("AllButUpsideDown") }
         return "[\(values.joined(separator: ", "))]"
+    }
+}
+
+extension UIInterfaceOrientation: CustomStringConvertible {
+
+    public var description: String {
+        let value: String
+        switch self {
+        case .unknown: value = "Unknown"
+        case .portrait: value = "Portrait"
+        case .portraitUpsideDown: value = "PortraitUpsideDown"
+        case .landscapeLeft: value = "LandscapeLeft"
+        case .landscapeRight: value = "LandscapeRight"
+        @unknown default:
+            fatalError()
+        }
+        return value
+    }
+}
+
+extension UIDeviceOrientation: CustomStringConvertible {
+
+    public var description: String {
+        let value: String
+        switch self {
+        case .unknown: value = "Unknown"
+        case .portrait: value = "Portrait"
+        case .portraitUpsideDown: value = "PortraitUpsideDown"
+        case .landscapeLeft: value = "LandscapeLeft"
+        case .landscapeRight: value = "LandscapeRight"
+        case .faceUp: value = "FaceUo"
+        case .faceDown: value = "FaceDown"
+        @unknown default:
+            fatalError()
+        }
+        return value
     }
 }
 
