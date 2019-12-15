@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22C956E1EE8D93F09A953BA5 /* Pods_TestOrientation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2C04B187847D9F62A949236 /* Pods_TestOrientation.framework */; };
 		A920306823A6462300C0E8A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A920306723A6462300C0E8A0 /* AppDelegate.swift */; };
 		A920306A23A6462300C0E8A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A920306923A6462300C0E8A0 /* SceneDelegate.swift */; };
 		A920306C23A6462300C0E8A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A920306B23A6462300C0E8A0 /* ViewController.swift */; };
@@ -24,6 +25,9 @@
 		A920307023A6462600C0E8A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A920307323A6462600C0E8A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A920307523A6462600C0E8A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC2168AEF5291DBCFA704EFC /* Pods-TestOrientation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestOrientation.debug.xcconfig"; path = "Target Support Files/Pods-TestOrientation/Pods-TestOrientation.debug.xcconfig"; sourceTree = "<group>"; };
+		E2C04B187847D9F62A949236 /* Pods_TestOrientation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestOrientation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB2736521E752604CD08ECCF /* Pods-TestOrientation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestOrientation.release.xcconfig"; path = "Target Support Files/Pods-TestOrientation/Pods-TestOrientation.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22C956E1EE8D93F09A953BA5 /* Pods_TestOrientation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3026E5067B42B57A9961A312 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DC2168AEF5291DBCFA704EFC /* Pods-TestOrientation.debug.xcconfig */,
+				EB2736521E752604CD08ECCF /* Pods-TestOrientation.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A6B2F6AA9601677CE3A40CCF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2C04B187847D9F62A949236 /* Pods_TestOrientation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A920305B23A6462300C0E8A0 = {
 			isa = PBXGroup;
 			children = (
 				A920306623A6462300C0E8A0 /* TestOrientation */,
 				A920306523A6462300C0E8A0 /* Products */,
+				3026E5067B42B57A9961A312 /* Pods */,
+				A6B2F6AA9601677CE3A40CCF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A920307823A6462600C0E8A0 /* Build configuration list for PBXNativeTarget "TestOrientation" */;
 			buildPhases = (
+				5BF1BDDEA85A2926FAF0D2F9 /* [CP] Check Pods Manifest.lock */,
 				A920306023A6462300C0E8A0 /* Sources */,
 				A920306123A6462300C0E8A0 /* Frameworks */,
 				A920306223A6462300C0E8A0 /* Resources */,
+				3FF1A94DB1C625C459E1A852 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3FF1A94DB1C625C459E1A852 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestOrientation/Pods-TestOrientation-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestOrientation/Pods-TestOrientation-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestOrientation/Pods-TestOrientation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5BF1BDDEA85A2926FAF0D2F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestOrientation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A920306023A6462300C0E8A0 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		A920307923A6462600C0E8A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC2168AEF5291DBCFA704EFC /* Pods-TestOrientation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		A920307A23A6462600C0E8A0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB2736521E752604CD08ECCF /* Pods-TestOrientation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
