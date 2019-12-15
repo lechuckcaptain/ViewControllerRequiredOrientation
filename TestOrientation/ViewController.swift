@@ -7,10 +7,17 @@
 //
 
 import UIKit
+import Hero
 
 class ViewController: UIViewController {
 
     lazy var closeDialogButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(self.dismissDialog))
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+//        self.hero.isEnabled = true
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -19,20 +26,20 @@ class ViewController: UIViewController {
             _ = addLeftBarButton(closeDialogButton)
         }
 
-        UIViewController.attemptRotationToDeviceOrientation()
+//        UIViewController.attemptRotationToDeviceOrientation()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        UIViewController.attemptRotationToDeviceOrientation()
+//        UIViewController.attemptRotationToDeviceOrientation()
     }
 }
 
 class HViewController: ViewController {
 
     override var shouldAutorotate: Bool {
-        return false
+        return true
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -43,7 +50,7 @@ class HViewController: ViewController {
 class VViewController: ViewController {
 
     override var shouldAutorotate: Bool {
-        return false
+        return true
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -90,18 +97,23 @@ extension UIViewController {
 
 class NavigationController: UINavigationController {
 
+    override func viewDidLoad() {
+       super.viewDidLoad()
+       self.hero.isEnabled = true
+    }
+
     override var shouldAutorotate: Bool {
+        //        return false
         let sa = topViewController?.shouldAutorotate ?? super.shouldAutorotate
-//        print("Rotation - '\(self.typeName)' shouldAutorotate: \(sa)")
-        return false
-//        return sa
+        print("Rotation - '\(self.typeName)' shouldAutorotate: \(sa)")
+        return sa
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+//        return .portrait
         let sio = topViewController?.supportedInterfaceOrientations ?? super.supportedInterfaceOrientations
         print("Rotation - '\(self.typeName)' supportedInterfaceOrientations: \(sio)")
-        return .portrait
-//        return sio
+        return sio
     }
 }
 
@@ -138,6 +150,3 @@ extension UIInterfaceOrientationMask: CustomStringConvertible {
         return "[\(values.joined(separator: ", "))]"
     }
 }
-
-
-
