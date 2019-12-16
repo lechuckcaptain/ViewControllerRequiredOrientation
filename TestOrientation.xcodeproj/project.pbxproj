@@ -13,6 +13,11 @@
 		A920306F23A6462300C0E8A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A920306D23A6462300C0E8A0 /* Main.storyboard */; };
 		A920307123A6462600C0E8A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A920307023A6462600C0E8A0 /* Assets.xcassets */; };
 		A920307423A6462600C0E8A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A920307223A6462600C0E8A0 /* LaunchScreen.storyboard */; };
+		A961EDE023A77F15005C5C2B /* Enums+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A961EDDF23A77F15005C5C2B /* Enums+CustomStringConvertible.swift */; };
+		A961EDE223A77F43005C5C2B /* UINavigationController+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A961EDE123A77F43005C5C2B /* UINavigationController+Orientation.swift */; };
+		A961EDE523A77F9B005C5C2B /* UIViewController+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A961EDE423A77F9B005C5C2B /* UIViewController+Orientation.swift */; };
+		A961EDE723A77FD3005C5C2B /* UIViewController+Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A961EDE623A77FD3005C5C2B /* UIViewController+Dialog.swift */; };
+		A961EDE923A78008005C5C2B /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A961EDE823A78008005C5C2B /* NSObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		A920307023A6462600C0E8A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A920307323A6462600C0E8A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A920307523A6462600C0E8A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A961EDDF23A77F15005C5C2B /* Enums+CustomStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Enums+CustomStringConvertible.swift"; sourceTree = "<group>"; };
+		A961EDE123A77F43005C5C2B /* UINavigationController+Orientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Orientation.swift"; sourceTree = "<group>"; };
+		A961EDE423A77F9B005C5C2B /* UIViewController+Orientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Orientation.swift"; sourceTree = "<group>"; };
+		A961EDE623A77FD3005C5C2B /* UIViewController+Dialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Dialog.swift"; sourceTree = "<group>"; };
+		A961EDE823A78008005C5C2B /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,28 @@
 		A920306623A6462300C0E8A0 /* TestOrientation */ = {
 			isa = PBXGroup;
 			children = (
+				A961EDE323A77F6B005C5C2B /* Extensions */,
+				A920307523A6462600C0E8A0 /* Info.plist */,
 				A920306723A6462300C0E8A0 /* AppDelegate.swift */,
 				A920306923A6462300C0E8A0 /* SceneDelegate.swift */,
 				A920306B23A6462300C0E8A0 /* ViewController.swift */,
-				A920306D23A6462300C0E8A0 /* Main.storyboard */,
 				A920307023A6462600C0E8A0 /* Assets.xcassets */,
 				A920307223A6462600C0E8A0 /* LaunchScreen.storyboard */,
-				A920307523A6462600C0E8A0 /* Info.plist */,
+				A920306D23A6462300C0E8A0 /* Main.storyboard */,
 			);
 			path = TestOrientation;
+			sourceTree = "<group>";
+		};
+		A961EDE323A77F6B005C5C2B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A961EDDF23A77F15005C5C2B /* Enums+CustomStringConvertible.swift */,
+				A961EDE123A77F43005C5C2B /* UINavigationController+Orientation.swift */,
+				A961EDE423A77F9B005C5C2B /* UIViewController+Orientation.swift */,
+				A961EDE623A77FD3005C5C2B /* UIViewController+Dialog.swift */,
+				A961EDE823A78008005C5C2B /* NSObject.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +162,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A920306C23A6462300C0E8A0 /* ViewController.swift in Sources */,
+				A961EDE923A78008005C5C2B /* NSObject.swift in Sources */,
+				A961EDE023A77F15005C5C2B /* Enums+CustomStringConvertible.swift in Sources */,
 				A920306823A6462300C0E8A0 /* AppDelegate.swift in Sources */,
 				A920306A23A6462300C0E8A0 /* SceneDelegate.swift in Sources */,
+				A961EDE723A77FD3005C5C2B /* UIViewController+Dialog.swift in Sources */,
+				A961EDE223A77F43005C5C2B /* UINavigationController+Orientation.swift in Sources */,
+				A961EDE523A77F9B005C5C2B /* UIViewController+Orientation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
