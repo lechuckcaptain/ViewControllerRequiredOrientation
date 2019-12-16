@@ -60,6 +60,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="o5g-v3-gGW"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -88,6 +91,9 @@
                         <viewLayoutGuide key="safeArea" id="SvN-X2-U4o"/>
                     </view>
                     <navigationItem key="navigationItem" id="8hG-fT-E1B"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t5D-ET-VwA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -116,6 +122,9 @@
                         <viewLayoutGuide key="safeArea" id="zfK-RY-zh4"/>
                     </view>
                     <navigationItem key="navigationItem" id="FFc-3s-Uul"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="80G-S1-wuU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -144,6 +153,9 @@
                         <viewLayoutGuide key="safeArea" id="07q-2C-3Xu"/>
                     </view>
                     <navigationItem key="navigationItem" id="bpM-rp-yFa"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="189-KV-UW4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -159,6 +171,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Tvj-c8-Qa6"/>
                     </connections>
@@ -183,7 +198,7 @@
                                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <segue destination="ZHT-Hy-hZa" kind="show" id="9eg-Jg-Rpz"/>
+                                            <segue destination="ZHT-Hy-hZa" kind="show" destinationCreationSelector="same:" id="9eg-Jg-Rpz"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcB-XR-zoT">
@@ -220,68 +235,13 @@
                         <viewLayoutGuide key="safeArea" id="3jC-bE-42S"/>
                     </view>
                     <navigationItem key="navigationItem" id="I4z-nF-293"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hal-MN-idA" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="606" y="-1702"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="8pX-e1-qF2">
-            <objects>
-                <viewController id="7KH-5E-8fj" customClass="ViewController" customModule="TestOrientation" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="o0H-Ni-6T6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ksA-m0-q2d">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76p-Gl-5w8">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="266"/>
-                                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <segue destination="Q63-Hq-gc6" kind="presentation" id="B6e-wq-vi2"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCI-7q-rJ0">
-                                        <rect key="frame" x="0.0" y="276" width="414" height="266"/>
-                                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <segue destination="RN5-Qw-Luy" kind="show" id="mCL-5I-KN9"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReP-91-5eW">
-                                        <rect key="frame" x="0.0" y="552" width="414" height="266"/>
-                                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <segue destination="gIg-aD-dsX" kind="presentation" id="Stm-Za-ggt"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="76p-Gl-5w8" firstAttribute="width" secondItem="ksA-m0-q2d" secondAttribute="width" id="S16-kZ-SDc"/>
-                                    <constraint firstItem="ReP-91-5eW" firstAttribute="width" secondItem="ksA-m0-q2d" secondAttribute="width" id="qxs-8k-BOt"/>
-                                    <constraint firstItem="WCI-7q-rJ0" firstAttribute="width" secondItem="ksA-m0-q2d" secondAttribute="width" id="wTR-Ap-SqN"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="xZT-5h-k1q" firstAttribute="trailing" secondItem="ksA-m0-q2d" secondAttribute="trailing" id="Hqd-yO-D7G"/>
-                            <constraint firstItem="ksA-m0-q2d" firstAttribute="top" secondItem="xZT-5h-k1q" secondAttribute="top" id="Wxx-bA-eYY"/>
-                            <constraint firstItem="ksA-m0-q2d" firstAttribute="leading" secondItem="xZT-5h-k1q" secondAttribute="leading" id="Zpg-yu-fg4"/>
-                            <constraint firstItem="xZT-5h-k1q" firstAttribute="bottom" secondItem="ksA-m0-q2d" secondAttribute="bottom" id="k4H-ki-b8X"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="xZT-5h-k1q"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="MLC-Ov-4il"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j3C-uf-7sq" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="606" y="159"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7wS-DZ-Sht">
@@ -294,6 +254,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="xvp-Kt-h59" kind="relationship" relationship="rootViewController" id="k5w-gx-uJo"/>
                     </connections>
@@ -313,6 +276,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="gFH-Kf-ISt" kind="relationship" relationship="rootViewController" id="KKk-Sx-ctY"/>
                     </connections>
@@ -332,6 +298,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="ZHT-Hy-hZa" kind="relationship" relationship="rootViewController" id="SNu-Ft-GJ2"/>
                     </connections>
@@ -343,13 +312,16 @@
         <!--Navigation Controller-->
         <scene sceneID="cQC-Vd-qKT">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="awR-dl-VHk" customClass="NavigationController" customModule="TestOrientation" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="awR-dl-VHk" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jsr-Uf-oZ6">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="Sy8-qQ-SEb" kind="relationship" relationship="rootViewController" id="Pt0-GA-diH"/>
                     </connections>
@@ -360,9 +332,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="CG9-6Q-s8R"/>
-        <segue reference="Uwg-vP-Y9A"/>
-        <segue reference="Scb-PR-btF"/>
         <segue reference="9eg-Jg-Rpz"/>
         <segue reference="Rd8-1g-uUB"/>
         <segue reference="QGZ-oS-qJa"/>
