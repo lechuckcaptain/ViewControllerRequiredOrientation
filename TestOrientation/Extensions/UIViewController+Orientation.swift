@@ -20,6 +20,11 @@ extension UIViewController {
         return (Int(deviceInterfaceOrientationMask.rawValue) & Int(supportedInterfaceOrientations.rawValue)) != 0
     }
 
+    func changeOrientation(_ orientation: UIDeviceOrientation) {
+        print("Change orientation: \(orientation)")
+        UIDevice.current.setValue(orientation.rawValue, forKey: "orientation")
+    }
+
     func changeOrientation(_ orientation: UIInterfaceOrientation) {
         print("Change orientation: \(orientation)")
         UIDevice.current.setValue(orientation.rawValue, forKey: "orientation")
