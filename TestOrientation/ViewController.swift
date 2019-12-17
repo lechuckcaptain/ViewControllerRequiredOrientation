@@ -15,10 +15,17 @@ class ViewController: UIViewController {
             _ = addLeftBarButton(closeDialogButton)
         }
 
-        print("Device orientation: \(UIDevice.current.orientation)")
+        let o1 = UIDevice.current.orientation
+        let s1 = "Device: \(o1), is Portrait: \(o1.isPortrait), is Landscape: \(o1.isLandscape)"
+
         if (!isCurrentOrientationSupported()) {
             changeOrientation(preferredInterfaceOrientationForPresentation)
         }
+
+        let o2 = UIDevice.current.orientation
+        let s2 = "Device: \(o2), is Portrait: \(o2.isPortrait), is Landscape: \(o2.isLandscape)"
+
+        print("\(s1) -> \(s2)")
     }
 }
 
